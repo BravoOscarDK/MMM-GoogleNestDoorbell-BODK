@@ -1,0 +1,15 @@
+credentials.json
+pubsub-service-account.json
+node_modules/
+*.log
+tokens.json
+oauth-client.json
+*-service-account.json
+*.pem
+.env
+.env.*
+!.env.example
+.tools/
+coverage/
+.DS_Store
+Thumbs.db

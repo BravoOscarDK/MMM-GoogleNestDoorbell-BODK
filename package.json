@@ -1,0 +1,36 @@
+{
+  "name": "mmm-googlenestdoorbell-bodk",
+  "version": "1.0.0",
+  "description": "MagicMirror² module for Google Nest Doorbell (battery) using Google SDM API, Pub/Sub and WebRTC.",
+  "main": "MMM-GoogleNestDoorbell-BODK.js",
+  "type": "commonjs",
+  "private": true,
+  "author": "BODK",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BravoOscarDK/MMM-GoogleNestDoorbell-BODK.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BravoOscarDK/MMM-GoogleNestDoorbell-BODK/issues"
+  },
+  "keywords": [
+    "magicmirror",
+    "google",
+    "nest",
+    "doorbell",
+    "webrtc"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node setup-check.js",
+    "authorize": "node scripts/authorize.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.22.2 <23 || >=24"
+  },
+  "dependencies": {
+    "@google-cloud/pubsub": "^6.3.2",
+    "googleapis": "^189.0.0"
+  }
+}

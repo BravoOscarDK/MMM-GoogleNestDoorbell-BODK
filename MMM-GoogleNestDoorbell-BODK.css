@@ -1,0 +1,21 @@
+.MMM-GoogleNestDoorbell-BODK-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  overflow: hidden;
+  pointer-events: none;
+  box-sizing: border-box;
+  background: #000;
+}
+.MMM-GoogleNestDoorbell-BODK-overlay.active { display: block; }
+.MMM-GoogleNestDoorbell-BODK-overlay video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.MMM-GoogleNestDoorbell-BODK-label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: rgb(0 0 0 / 65%);
+  color: #fff;
+  font: 18px/1.2 Arial, sans-serif;
+}
