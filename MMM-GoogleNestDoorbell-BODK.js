@@ -1,9 +1,22 @@
 /* global Module, RTCPeerConnection, RTCRtpReceiver, MediaStream, Log */
 Module.register("MMM-GoogleNestDoorbell-BODK", {
   requiresVersion: "2.38.0",
+  text(key) {
+    const texts = {
+      "en": {
+        "Someone is at the door": "Someone is at the door"
+      },
+      "da": {
+        "Someone is at the door": "Nogen ringer på"
+      }
+    };
+    const language = String(this.config.language || "en").toLowerCase().split(/[-_]/)[0];
+    return (Object.hasOwn(texts, language) ? texts[language] : texts.en)[key] || texts.en[key] || key;
+  },
   defaults: {
+    language: "en",
     x: 50, y: 100, width: 640, height: 480, displayDuration: 30000,
-    showOnDoorbellPress: true, showLabel: true, label: "Nogen ringer på",
+    showOnDoorbellPress: true, showLabel: true, label: null,
     borderRadius: 8, opacity: 1, muted: true, controls: false
   },
   start() {
@@ -30,7 +43,7 @@ Module.register("MMM-GoogleNestDoorbell-BODK", {
     if (this.config.showLabel) {
       const label = document.createElement("span");
       label.className = "MMM-GoogleNestDoorbell-BODK-label";
-      label.textContent = this.config.label; root.appendChild(label);
+      label.textContent = this.config.label ?? this.text("Someone is at the door"); root.appendChild(label);
     }
     this.root = root;
     return root;

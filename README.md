@@ -12,7 +12,7 @@ In your terminal, go to the MagicMirror modules folder and clone:
 cd ~/MagicMirror/modules
 git clone https://github.com/BravoOscarDK/MMM-GoogleNestDoorbell-BODK.git
 cd ~/MagicMirror/modules/MMM-GoogleNestDoorbell-BODK
-npm ci
+npm install
 npm run check
 ```
 
@@ -78,6 +78,7 @@ Add this object to the `modules` array in `~/MagicMirror/config/config.js`. Repl
   module: "MMM-GoogleNestDoorbell-BODK",
   position: "top_left",
   config: {
+    language: "en",
     sdmProjectId: "YOUR_DEVICE_ACCESS_PROJECT_ID",
     deviceId: "enterprises/YOUR_DEVICE_ACCESS_PROJECT_ID/devices/YOUR_DEVICE_ID",
     pubsubProjectId: "YOUR_GOOGLE_CLOUD_PROJECT_ID",
@@ -105,7 +106,7 @@ The helper reads settings directly from MagicMirror's server configuration using
 | `width`, `height` | `640`, `480` | Overlay dimensions in pixels. Video retains its aspect ratio. |
 | `displayDuration` | `30000` | Milliseconds, clamped to 1000–240000; earlier Google expiry takes precedence. |
 | `showOnDoorbellPress` | `true` | Open video on a valid chime. |
-| `showLabel`, `label` | `true`, `"Nogen ringer på"` | Overlay label; rendered as text. |
+| `showLabel`, `label` | `true`, `null` (translated: "Someone is at the door") | Overlay label; rendered as text. |
 | `borderRadius`, `opacity` | `8`, `1` | Corner radius in pixels; opacity clamped to 0–1. |
 | `muted`, `controls` | `true`, `false` | Muted playback works with browser autoplay. Unmuted audio may require interaction; enable controls if needed. |
 
@@ -129,7 +130,7 @@ Chimes from other devices, older than 60 seconds, duplicated or belonging to upd
 ```sh
 cd ~/MagicMirror/modules/MMM-GoogleNestDoorbell-BODK
 git pull --ff-only
-npm ci
+npm install
 npm run check
 ```
 
@@ -160,3 +161,7 @@ For a black picture, check browser WebRTC support, firewall/NAT access to Google
 Never store private JSON files in this directory: MagicMirror can serve module files over HTTP. `.gitignore` provides an additional guard against accidental commits. Keep MagicMirror's access controls enabled. See [SECURITY.md](SECURITY.md), [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md) and the [MIT license](LICENSE).
 
 References: [MagicMirror² 2.38.0](https://github.com/MagicMirrorOrg/MagicMirror/releases/tag/v2.38.0), [Google authorization](https://developers.google.com/nest/device-access/authorize), [WebRTC stream commands and SDP requirements](https://developers.google.com/nest/device-access/traits/device/camera-live-stream), [DoorbellChime events](https://developers.google.com/nest/device-access/traits/device/doorbell-chime).
+
+## Language
+
+English is the default, independently of the MagicMirror global language. Set `language: "da"` in this module's `config` for Danish, or `language: "en"` for English. Unsupported languages fall back to English. Custom labels and device names retain their configured values. Technical logs and diagnostic errors are in English.

@@ -1,7 +1,7 @@
 {
   "name": "mmm-googlenestdoorbell-bodk",
   "version": "1.0.0",
-  "description": "MagicMirror² module for Google Nest Doorbell (battery) using Google SDM API, Pub/Sub and WebRTC.",
+  "description": "MagicMirror\u00b2 module for Google Nest Doorbell (battery) using Google SDM API, Pub/Sub and WebRTC.",
   "main": "MMM-GoogleNestDoorbell-BODK.js",
   "type": "commonjs",
   "private": true,

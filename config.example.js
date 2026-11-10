@@ -14,7 +14,7 @@ module.exports = {
     // serviceAccountPath: "/home/pi/.config/MMM-GoogleNestDoorbell-BODK/pubsub-service-account.json",
     x: 50, y: 100, width: 640, height: 480,
     displayDuration: 30000,
-    showOnDoorbellPress: true, showLabel: true, label: "Nogen ringer på",
+    showOnDoorbellPress: true, showLabel: true, language: "en",
     borderRadius: 8, opacity: 1, muted: true, controls: false
   }
 };
