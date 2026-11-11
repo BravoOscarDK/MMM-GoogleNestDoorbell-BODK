@@ -4,6 +4,14 @@
 
 MagicMirror² module for showing Google Nest Doorbell (battery) live video when somebody rings. Uses Google's Device Access / SDM API, a Pub/Sub pull subscription and browser WebRTC. No Home Assistant or FFmpeg required.
 
+### Preview
+
+Active doorbell overlay with an illustrated placeholder instead of a real camera feed. No Google account or camera was connected. English is the default language.
+
+![GoogleNestDoorbell example with fictional data](docs/images/example.png)
+
+The [browser preview](docs/preview.html) uses fictional data only; it does not validate external services or hardware.
+
 ## Requirements
 
 MagicMirror² 2.38.0 and Node.js `>=22.22.2 <23 || >=24`, as declared by this module. A compatible WebRTC-capable Google Nest Doorbell, internet access, Device Access authorization and a Google Cloud Pub/Sub pull subscription are required.

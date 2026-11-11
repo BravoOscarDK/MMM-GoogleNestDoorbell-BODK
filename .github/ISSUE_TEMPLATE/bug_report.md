@@ -9,7 +9,7 @@ Describe what you did, what happened and what you expected.
 
 ## Environment
 
-- MagicMirror version:
+- MagicMirror² version:
 - Node.js version:
 - OS / Raspberry Pi model:
 - Nest doorbell model:
