@@ -13,3 +13,13 @@ oauth-client.json
 coverage/
 .DS_Store
 Thumbs.db
+
+# Local agent instructions and editor settings
+AGENTS.md
+AGENTS.override.md
+CLAUDE.md
+.codex/
+.agents/
+.claude/
+.vscode/
+.idea/
